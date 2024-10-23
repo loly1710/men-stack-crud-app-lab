@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Create a Food</title>
+  </head>
+  <body>
+    <a class="food-index-link" href="/food">
+      <div class="index-link-text">Back to food</div>
+    </a>
+    <h1>Create a New Food!</h1>
+    <form action="/food" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" />
+      <div class="checkbox-div">
+        <label for="ready-to-eat">Ready to Eat?</label>
+        <input type="checkbox" name="isReadyToEat" id="ready-to-eat" />
+      </div>
+
+      <button type="submit">Add Food</button>
+    </form>
+  </body>
+</html>

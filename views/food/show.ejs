@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= food.name %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+  <div class="food-details">
+  <h1><%= food.name %></h1>
+  <% if(food.isReadyToEat){ %>
+    <p>This food is ready to eat!</p>
+  <% } else { %>
+    <p>This food is not ready to eat!</p>
+  <% } %>
+  
+  <div class="food-actions">
+    <form
+      class="delete-form"
+      action="/food/<%=food._id%>?_method=DELETE"
+      method="POST"
+    >
+      <button class="delete-button" type="submit">
+        Delete <%= food.name %>
+      </button>
+    </form>
+    <a class="edit-link" href="/food/<%= food._id %>/edit">
+      <div class="edit-text">Edit <%= food.name %></div>
+    </a>
+  </div>
+  
+  <a class="food-index-link" href="/food">
+    <div class="index-link-text">Back to Food</div>
+  </a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Food Index</title>
+  </head>
+  <body>
+    <div class="index-header-div">
+      <a class="add-food" href="/food/new">Add food</a>
+    </div>
+    <h1>All Food</h1>
+    <ul>
+      <% food.forEach(food => { %>
+      <li>
+        <a class="food-cards" href="/food/<%= food._id %>"> <%= food.name %> </a>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
